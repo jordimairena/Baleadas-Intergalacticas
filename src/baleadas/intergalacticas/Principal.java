@@ -106,20 +106,30 @@ public class Principal extends javax.swing.JFrame {
         jLabel50 = new javax.swing.JLabel();
         jLabel51 = new javax.swing.JLabel();
         jLabel52 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        num_orden_orden = new javax.swing.JTextField();
+        nom_cliente_orden = new javax.swing.JTextField();
+        total_pagar_orden = new javax.swing.JTextField();
+        tiempo_prep_orden = new javax.swing.JTextField();
+        jButton16 = new javax.swing.JButton();
         modificar_ordenes = new javax.swing.JDialog();
-        jLabel40 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
+        jButton17 = new javax.swing.JButton();
+        jLabel53 = new javax.swing.JLabel();
+        modif_tiempo_orden = new javax.swing.JTextField();
+        modif_total_pagar_orden = new javax.swing.JTextField();
+        modif_nom_cliente = new javax.swing.JTextField();
+        modif_num_orden = new javax.swing.JTextField();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
         eliminar_ordenes = new javax.swing.JDialog();
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
         jLabel46 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
+        cb_eliminar_orden = new javax.swing.JComboBox();
         jButton8 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -665,6 +675,8 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel52.setText("Tiempo de Preparacion:");
 
+        jButton16.setText("Guardar");
+
         javax.swing.GroupLayout agregar_ordenesLayout = new javax.swing.GroupLayout(agregar_ordenes.getContentPane());
         agregar_ordenes.getContentPane().setLayout(agregar_ordenesLayout);
         agregar_ordenesLayout.setHorizontalGroup(
@@ -683,7 +695,7 @@ public class Principal extends javax.swing.JFrame {
                             .addGroup(agregar_ordenesLayout.createSequentialGroup()
                                 .addComponent(jLabel52)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(tiempo_prep_orden, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(agregar_ordenesLayout.createSequentialGroup()
                                 .addGroup(agregar_ordenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel49)
@@ -691,11 +703,13 @@ public class Principal extends javax.swing.JFrame {
                                     .addComponent(jLabel51))
                                 .addGap(33, 33, 33)
                                 .addGroup(agregar_ordenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField1)
-                                    .addComponent(jTextField2)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE))))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                .addComponent(jLabel38)
+                                    .addComponent(num_orden_orden)
+                                    .addComponent(nom_cliente_orden)
+                                    .addComponent(total_pagar_orden, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE))))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                .addGroup(agregar_ordenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel38, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         agregar_ordenesLayout.setVerticalGroup(
@@ -703,7 +717,6 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(agregar_ordenesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(agregar_ordenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel38)
                     .addGroup(agregar_ordenesLayout.createSequentialGroup()
                         .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -711,29 +724,42 @@ public class Principal extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(agregar_ordenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel49)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(num_orden_orden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(agregar_ordenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel50)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(nom_cliente_orden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(agregar_ordenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel51)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(total_pagar_orden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(agregar_ordenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel52))))
+                            .addComponent(tiempo_prep_orden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel52)))
+                    .addComponent(jLabel38))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baleadas/intergalacticas/photo-17805.jpg"))); // NOI18N
+        jButton17.setText("Guardar");
 
-        jLabel41.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
-        jLabel41.setText("Modificar una Orden");
+        jLabel53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baleadas/intergalacticas/photo-17805.jpg"))); // NOI18N
 
-        jLabel42.setFont(new java.awt.Font("Curlz MT", 3, 36)); // NOI18N
-        jLabel42.setText("Baleadas Intergalácticas");
+        jLabel54.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
+        jLabel54.setText("Modificar una Orden");
+
+        jLabel55.setText("Nombre del cliente:");
+
+        jLabel56.setText("Total a pagar:");
+
+        jLabel57.setText("Tiempo de Preparacion:");
+
+        jLabel58.setText("Numero de Orden:");
+
+        jLabel59.setFont(new java.awt.Font("Curlz MT", 3, 36)); // NOI18N
+        jLabel59.setText("Baleadas Intergalácticas");
 
         javax.swing.GroupLayout modificar_ordenesLayout = new javax.swing.GroupLayout(modificar_ordenes.getContentPane());
         modificar_ordenes.getContentPane().setLayout(modificar_ordenesLayout);
@@ -743,12 +769,31 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(modificar_ordenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(modificar_ordenesLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(modificar_ordenesLayout.createSequentialGroup()
                         .addGap(84, 84, 84)
-                        .addComponent(jLabel41)))
+                        .addComponent(jLabel54))
+                    .addGroup(modificar_ordenesLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(modificar_ordenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(modificar_ordenesLayout.createSequentialGroup()
+                                .addComponent(jLabel57)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(modif_tiempo_orden, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(modificar_ordenesLayout.createSequentialGroup()
+                                .addGroup(modificar_ordenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel58)
+                                    .addComponent(jLabel55)
+                                    .addComponent(jLabel56))
+                                .addGap(33, 33, 33)
+                                .addGroup(modificar_ordenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(modif_num_orden)
+                                    .addComponent(modif_nom_cliente)
+                                    .addComponent(modif_total_pagar_orden, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE))))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel40)
+                .addGroup(modificar_ordenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel53, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         modificar_ordenesLayout.setVerticalGroup(
@@ -756,12 +801,30 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(modificar_ordenesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(modificar_ordenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel40)
                     .addGroup(modificar_ordenesLayout.createSequentialGroup()
-                        .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel41)))
-                .addContainerGap(105, Short.MAX_VALUE))
+                        .addComponent(jLabel54)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(modificar_ordenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel58)
+                            .addComponent(modif_num_orden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(modificar_ordenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel55)
+                            .addComponent(modif_nom_cliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(modificar_ordenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel56)
+                            .addComponent(modif_total_pagar_orden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(modificar_ordenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(modif_tiempo_orden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel57)))
+                    .addComponent(jLabel53))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/baleadas/intergalacticas/photo-17805.jpg"))); // NOI18N
@@ -797,7 +860,7 @@ public class Principal extends javax.swing.JFrame {
                                 .addContainerGap()
                                 .addComponent(jLabel46)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(cb_eliminar_orden, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel43)))
                 .addContainerGap())
@@ -815,7 +878,7 @@ public class Principal extends javax.swing.JFrame {
                         .addGap(7, 7, 7)
                         .addGroup(eliminar_ordenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel46)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(cb_eliminar_orden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -1010,6 +1073,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JDialog agregar_ingrediente;
     private javax.swing.JDialog agregar_ordenes;
     private javax.swing.JDialog agregar_platos;
+    private javax.swing.JComboBox cb_eliminar_orden;
     private javax.swing.JComboBox cb_eliminar_plato;
     private javax.swing.JComboBox cb_modificar_plato;
     private javax.swing.JDialog cocineros;
@@ -1022,6 +1086,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1030,7 +1096,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1065,9 +1130,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
@@ -1079,6 +1141,13 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -1089,14 +1158,18 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JDialog menu_ordenes;
     private javax.swing.JDialog menu_platos;
+    private javax.swing.JTextField modif_nom_cliente;
+    private javax.swing.JTextField modif_num_orden;
+    private javax.swing.JTextField modif_tiempo_orden;
+    private javax.swing.JTextField modif_total_pagar_orden;
     private javax.swing.JDialog modificar_ordenes;
     private javax.swing.JDialog modificar_platos;
+    private javax.swing.JTextField nom_cliente_orden;
+    private javax.swing.JTextField num_orden_orden;
+    private javax.swing.JTextField tiempo_prep_orden;
+    private javax.swing.JTextField total_pagar_orden;
     private javax.swing.JTextField txt_modif_nom_plato;
     private javax.swing.JTextField txt_modif_precio_plato;
     private javax.swing.JTextField txt_modif_tiempo_plato;
